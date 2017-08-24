@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lewa Plant Key Index</string>
+    <string name="text">This app represents information on plants and vegetation types found at Lewa Wildlife Conservancy, Kenya </string>
+    <string name="text1">This application will help you easily identify plants using their flower colors </string>
+    <string name="button">Identify a plant</string>
+    <string name="tittle">Lewa Wildlife Conservancy Plants Key Index</string>
+</resources>
