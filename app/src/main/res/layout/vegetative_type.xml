@@ -1,20 +1,28 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="8dip"
     android:orientation="vertical" >
 
     <!--Listview-->
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="16sp"/>
     <ListView
         android:id="@+id/vegType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:paddingTop="5dp"
         android:divider="#D3D3D3"
         android:dividerHeight="3dp"
         android:fontFamily="sans-serif-medium"
         android:layout_marginTop="2dp"
         android:listSelector="@drawable/list_selector">
     </ListView>
-    <!--header-->
-</RelativeLayout>
+</LinearLayout>

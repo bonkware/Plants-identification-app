@@ -57,7 +57,7 @@ public class DbHandler {
     }
     //Get list of all colors
     public Cursor getColors() {
-        String selectQuery = "SELECT * FROM colors order by id";
+        String selectQuery = "SELECT id as _id, color FROM colors order by id";
         return database.rawQuery(selectQuery, null);
     }
     //Get all flower colors related to the color you selected from above
@@ -71,14 +71,14 @@ public class DbHandler {
         Cglobal cg = Cglobal.getInstance();
         String selectQuery = "select vegetative_type_id as _id, vegetative_type from " +
                 "plant_details join vegetative_types on vegetative_types.id=plant_details.vegetative_type_id " +
-                "where plant_details.flower_color_id='" + cg.getflower_color_id() + "' group by vegetative_type;";
+                "where plant_details.flower_color_id='" + cg.getflower_color_id()  + "' group by vegetative_type;";
         return database.rawQuery(selectQuery, null);
     }
      // Getting information about the plant
     public Cursor getInfo() {
         Cglobal cg = Cglobal.getInstance();
         String selectQuery = "SELECT id as _id, image_name, scientific_name FROM plant_details where " +
-                "vegetative_type_id='" + cg.getvegetative_type_id() + "' and flower_color_id='" + cg.getflower_color_id() + "'";
+                "flower_color_id='" + cg.getflower_color_id()  + "' and vegetative_type_id='" + cg.getvegetative_type_id() + "'";
         return database.rawQuery(selectQuery, null);
     }
     //Getting information about the plant name from above

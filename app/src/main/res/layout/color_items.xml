@@ -6,6 +6,13 @@
     android:background="@drawable/list_selector"
     android:padding="12dip">
     <TextView
+        android:id="@+id/cid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textColor="#343434"
+        android:fontFamily="sans-serif-medium"/>
+    <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +28,7 @@
         android:textColor="#343434"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:layout_marginTop="3dip"
+        android:layout_marginTop="1dip"
         android:fontFamily="sans-serif-medium"/>
     <ImageView
         android:layout_width="wrap_content"

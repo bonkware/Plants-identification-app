@@ -23,7 +23,7 @@ public class Uses extends Activity {
         tableLayout2 = (TableLayout) findViewById(R.id.tableLayout2);
 
         Cglobal gt = Cglobal.getInstance();
-        String plantName = gt.getscintific_name();
+        String plantName = "Plant Name: " + gt.getscintific_name();
         name = (TextView) findViewById(R.id.name);
         name.setText(plantName);
 

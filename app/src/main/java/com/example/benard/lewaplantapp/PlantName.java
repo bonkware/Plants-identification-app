@@ -16,6 +16,7 @@ import android.widget.TextView;
  */
 
 public class PlantName extends AppCompatActivity {
+    private TextView pname;
 
     @Override
 
@@ -27,6 +28,9 @@ public class PlantName extends AppCompatActivity {
         Cglobal gv = Cglobal.getInstance();
 
         gv.setinfo_id(0);
+        String colorName = "You selected "+gv.getColor()+ " and " + gv.getvegetative_type();
+        pname = (TextView) findViewById(R.id.pname);
+        pname.setText(colorName);
 
         Cursor cursor;
         DbHandler databaseAccess = DbHandler.getInstance(this);

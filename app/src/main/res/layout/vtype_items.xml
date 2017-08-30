@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/list_selector"
     android:padding="12dip">
+
     <TextView
         android:id="@+id/vid"
         android:layout_width="fill_parent"

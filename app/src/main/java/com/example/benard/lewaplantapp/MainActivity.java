@@ -1,83 +1,66 @@
 package com.example.benard.lewaplantapp;
 
-
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.TextView;
+/**
+ * Created by benard on 7/31/17.
+ */
 
 public class MainActivity extends AppCompatActivity {
-    //declare
-    private ListView listView;
-    private ColorAdapter color;
-    private List<Cglobal> colors = new ArrayList<>();
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.colors);
+        Cglobal gv = Cglobal.getInstance();
 
-        this.listView = (ListView) findViewById(R.id.listView);
-        //Accessing database access class
-        DbHandler db = DbHandler.getInstance(this);
-        db.open();
-        Cursor cursor = db.getColors();
-        if (cursor.moveToFirst()) {
+        gv.setId(0);
+
+        Cursor cursor;
+        DbHandler databaseAccess = DbHandler.getInstance(this);
+        databaseAccess.open();
+        cursor = databaseAccess.getColors();
+       /* if (cursor.moveToFirst()) {
             do {
-                Cglobal color = new Cglobal();
-                color.setColor((cursor.getString(1)));
-                colors.add(color);
+                Cglobal c = new Cglobal();
+                c.setColor((cursor.getString(1)));
             } while (cursor.moveToNext());
-        }
-        color = new ColorAdapter(this, colors);
-        listView.setAdapter(color);
-        db.close();
+        }*/
+        ListView color = (ListView) findViewById(R.id.color);
+        ColorAdapter uses= new ColorAdapter(this,cursor);
+        color.setAdapter(uses);
+        color.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-        // added onclick listener for next activity and its result
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, FlowerColors.class);
-                Cglobal gv = Cglobal.getInstance();
-                switch (position)
-                {
-                    case 0: // first color
-                        gv.setId(1);
-                        break;
-                    case 1:
-                        gv.setId(2);
-                        break;
-                    case 2:
-                        gv.setId(3);
-                        break;
-                    case 3:
-                        gv.setId(4);
-                        break;
-                    case 4:
-                        gv.setId(5);
-                        break;
-                    case 5:
-                        gv.setId(6);
-                        break;
-                    case 6:
-                        gv.setId(7);
-                        break;
-                    case 7:
-                        gv.setId(8);
-                        break;
-                    case 8:
-                        gv.setId(9);
-                        break;
-                }
-                startActivity(intent);
-                overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
-            }
-        });
 
+                TextView flower_color_id = (TextView) view.findViewById(R.id.cid);
+
+                TextView color = (TextView) view.findViewById(R.id.color);
+
+                int cid= Integer.parseInt(flower_color_id.getText().toString());
+
+                Cglobal gv = Cglobal.getInstance();
+                gv.setflower_color_id(cid);
+                gv.setColor(color.getText().toString());
+
+                Intent intent = new Intent(getApplication(),VegetativeType.class);
+                intent.putExtra("color",cid);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
+
+            }
+
+        });
     }
 }
+
+

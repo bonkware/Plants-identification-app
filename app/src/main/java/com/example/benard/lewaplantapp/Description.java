@@ -27,7 +27,7 @@ public class Description extends Activity {
         tableLayout2 = (TableLayout) findViewById(R.id.tableLayout2);
 
         Cglobal gt = Cglobal.getInstance();
-        String plantName = gt.getscintific_name();
+        String plantName = "Plant Name: " + gt.getscintific_name();
         name = (TextView) findViewById(R.id.name);
         name.setText(plantName);
         String imageplantname = "Plant image of " + gt.getscintific_name();
@@ -50,6 +50,7 @@ public class Description extends Activity {
                     String imgName = cursor.getString(cursor.getColumnIndex("image_name"));
                     int image =  getResources().getIdentifier(imgName, "drawable",getPackageName());
                     setImage.setImageResource(image);
+                    setImage.setAdjustViewBounds(true);
 
                     //other information
                     family[i] = new TextView(this);

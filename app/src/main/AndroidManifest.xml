@@ -17,8 +17,6 @@
         </activity>
         <activity android:name=".MainActivity" android:label="Select flower color">
         </activity>
-        <activity android:name=".FlowerColors" android:label="Select flower color">
-        </activity>
         <activity android:name=".VegetativeType" android:label="Select vegetative type">
         </activity>
         <activity android:name=".PlantName" android:label="Select plant name">

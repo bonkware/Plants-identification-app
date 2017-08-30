@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#008000"
+    android:background="#bebfbe"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true" >
 
@@ -100,4 +100,45 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         android:background="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/tv_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dip"
+            android:shrinkColumns="1"
+            android:stretchColumns="*"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:orientation="vertical">
+            <TableRow
+                android:id="@+id/tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Lewa Plant"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:textColor="#0b0b0b"/>
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Identifier App"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:textColor="#0b0b0b"
+                    android:gravity="right"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
 </RelativeLayout>

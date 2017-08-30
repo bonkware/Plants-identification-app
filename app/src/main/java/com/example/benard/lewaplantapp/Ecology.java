@@ -27,7 +27,7 @@ public class Ecology extends Activity {
         tableLayout3 = (TableLayout) findViewById(R.id.tableLayout3);
 
         Cglobal gt = Cglobal.getInstance();
-        String plantName = gt.getscintific_name();
+        String plantName = "Plant Name: " + gt.getscintific_name();
         name = (TextView) findViewById(R.id.name);
         name.setText(plantName);
 
@@ -80,7 +80,6 @@ public class Ecology extends Activity {
                     abundance[i].setPadding(2, 0, 0, 0);
                     distr[i].setGravity(Gravity.CENTER);
                     abundance[i].setGravity(Gravity.CENTER);
-
 
                     desc.addView(distr[i], new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));
                     desc.addView(abundance[i], new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));

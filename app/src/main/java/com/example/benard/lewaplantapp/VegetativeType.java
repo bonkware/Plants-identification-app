@@ -15,6 +15,8 @@ import android.widget.TextView;
  */
 
 public class VegetativeType extends AppCompatActivity {
+    private TextView color;
+
 
     @Override
 
@@ -25,7 +27,11 @@ public class VegetativeType extends AppCompatActivity {
         setContentView(R.layout.vegetative_type);
         Cglobal gv = Cglobal.getInstance();
 
-          gv.setvegetative_type_id(0);
+        gv.setvegetative_type_id(0);
+        //selected flower color
+        String colorName = "You selected " + gv.getColor() +" flower color";
+        color = (TextView) findViewById(R.id.color);
+        color.setText(colorName);
 
         Cursor cursor;
         DbHandler databaseAccess = DbHandler.getInstance(this);
