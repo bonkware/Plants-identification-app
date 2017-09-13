@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:text="@string/tittle"
                 android:textSize="14dp"
                 android:gravity="center"
@@ -47,10 +47,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="@string/text1"
-                android:textColor="#000000"
                 android:textSize="14dp"
                 android:textStyle="italic"/>
 
@@ -60,10 +59,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="@string/text"
-                android:textColor="#000000"
                 android:textSize="14dp"
                 android:textStyle="italic" />
             <Button
@@ -79,15 +77,44 @@
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
             <TextView
-                android:id="@+id/guide"
+                android:id="@+id/by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/identify"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:text="Check the Guide on how it works?"
-                android:textSize="15dp"
+                android:text="@string/by"
+                android:textSize="12dp"
                 android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/authors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/by"
+                android:layout_centerHorizontal="true"
+                android:text="@string/authors"
+                android:textSize="12dp"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/developer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/authors"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/developed"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            <TextView
+                android:id="@+id/developers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/developer"
+                android:layout_centerHorizontal="true"
+                android:text="@string/developers"
+                android:textSize="12dp"
                 android:typeface="monospace" />
         </RelativeLayout>
     </ScrollView>

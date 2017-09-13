@@ -4,4 +4,8 @@
     <string name="text1">This application will help you easily identify plants using their flower colors </string>
     <string name="button">Identify a plant</string>
     <string name="tittle">Lewa Wildlife Conservancy Plants Key Index</string>
+    <string name="by">By</string>
+    <string name="authors">Wim Giesen, Paul Giesen &amp; Kris Giesen</string>
+    <string name="developed">Developers</string>
+    <string name="developers">Benard Onkware, Tor Vagen &amp; Muhammad Ahmad.</string>
 </resources>
