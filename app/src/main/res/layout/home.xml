@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/tittle"
                 android:textSize="14dp"
                 android:gravity="center"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/developer"
                 android:layout_centerHorizontal="true"
-                android:text="@string/developers"
+                android:text="@string/dev"
                 android:textSize="12dp"
                 android:typeface="monospace" />
         </RelativeLayout>
@@ -125,8 +125,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/ic_launcher" />
+        android:layout_marginTop="70dp"
+        android:background="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/tv_header"
@@ -153,18 +153,19 @@
                 <TextView
                     android:layout_width="0dp" android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Lewa Plant"
+                    android:text="Lewa Plant App"
                     android:textSize="15sp"
                     android:textStyle="italic"
                     android:textColor="#0b0b0b"/>
                 <TextView
                     android:layout_width="0dp" android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Identifier App"
+                    android:text="General Info"
                     android:textSize="15sp"
                     android:textStyle="italic"
-                    android:textColor="#0b0b0b"
-                    android:gravity="right"/>
+                    android:textColor="#3420a4"
+                    android:gravity="right"
+                    android:onClick="popup"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>

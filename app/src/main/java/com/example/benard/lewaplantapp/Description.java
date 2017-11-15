@@ -8,13 +8,22 @@ package com.example.benard.lewaplantapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.ZoomControls;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class Description extends Activity {
     private TextView name;
@@ -24,6 +33,8 @@ public class Description extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.description);
+
+
         tableLayout2 = (TableLayout) findViewById(R.id.tableLayout2);
 
         Cglobal gt = Cglobal.getInstance();
@@ -34,7 +45,7 @@ public class Description extends Activity {
         imagename = (TextView) findViewById(R.id.imagename);
         imagename.setText(imageplantname);
 
-        ImageView setImage= (ImageView) findViewById(R.id.img);
+        ImageView setImage = (ImageView) findViewById(R.id.img);
 
         TableLayout TL = (TableLayout) findViewById(R.id.tableLayout2);
         DbHandler databaseAccess = DbHandler.getInstance(this);
@@ -48,7 +59,7 @@ public class Description extends Activity {
                 for (int i = 0; i < textViewCount; i++) {
                     //get the plant image of the species
                     String imgName = cursor.getString(cursor.getColumnIndex("image_name"));
-                    int image =  getResources().getIdentifier(imgName, "drawable",getPackageName());
+                    int image = getResources().getIdentifier(imgName, "drawable", getPackageName());
                     setImage.setImageResource(image);
                     setImage.setAdjustViewBounds(true);
 
@@ -75,9 +86,9 @@ public class Description extends Activity {
         }
         databaseAccess.close();
     }
-    public void back(View view){
-    Intent intent = new Intent(getApplication(),PlantName.class);
-    startActivity(intent);
-    }
 
+    public void back(View view) {
+        Intent intent = new Intent(getApplication(), PlantName.class);
+        startActivity(intent);
+    }
 }

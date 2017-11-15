@@ -6,7 +6,8 @@ package com.example.benard.lewaplantapp;
  */
        import android.app.TabActivity;
         import android.content.Intent;
-        import android.os.Bundle;
+       import android.graphics.Color;
+       import android.os.Bundle;
         import android.widget.TabHost;
         import android.widget.TabHost.TabSpec;
 
@@ -27,14 +28,14 @@ public class PlantInfo extends TabActivity {
         desc.setContent(descIntent);
 
         // Tab for Uses
-        TabSpec uses = tabHost.newTabSpec("Uses");
-        uses.setIndicator("Uses");
+        TabSpec uses = tabHost.newTabSpec("Common names");
+        uses.setIndicator("Common names");
         Intent usesIntent = new Intent(this, Uses.class);
         uses.setContent(usesIntent);
 
         // Tab for Ecology
-        TabSpec ecology = tabHost.newTabSpec("Ecology");
-        ecology.setIndicator("Ecology");
+        TabSpec ecology = tabHost.newTabSpec("Distribution");
+        ecology.setIndicator("Distribution");
         Intent ecologyIntent = new Intent(this, Ecology.class);
         ecology.setContent(ecologyIntent);
 

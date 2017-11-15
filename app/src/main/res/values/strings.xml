@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Lewa Plant Key Index</string>
+    <string name="settings">Settings</string>
     <string name="text">This app represents information on plants and vegetation types found at Lewa Wildlife Conservancy, Kenya </string>
     <string name="text1">This application will help you easily identify plants using their flower colors </string>
     <string name="button">Identify a plant</string>
@@ -7,5 +8,25 @@
     <string name="by">By</string>
     <string name="authors">Wim Giesen, Paul Giesen &amp; Kris Giesen</string>
     <string name="developed">Developers</string>
-    <string name="developers">Benard Onkware, Tor Vagen &amp; Muhammad Ahmad.</string>
+    <string name="dev">
+        Benard Onkware, Tor Vagen &amp; Muhammad Ahmad.\n
+    </string>
+    <string name="developers">
+        <b>Developers &amp; Contacts</b>\n\n
+        Benard Onkware(b.onkware@cgiar.org), Tor Vagen &amp; Muhammad Ahmad.\n\n
+        <b>http://www.worldagroforestry.org/</b>
+    </string>
+    <string name="vegetation">
+        <b>Vegetation at Lewa</b>\n\n
+        Four main habitat types are recognised at Lewa, and form the basis for management of the Lewa Wildlife Conservancy; these four types are: Forest habitat (Ngare Ndare forest), Plain habitat, Hill and rocky outcrop habitat, and Riverine habitat.
+    </string>
+    <string name="title">Lewa Plant App Plants Key Index</string>
+    <string name="general_info">
+        <b>General information</b>\n\n
+        Up until the early 1980s, Lewa Downs was a 200 km² farm in Central Kenya run by the Craig family.
+        The main economic activities at Lewa at the time included cattle and sheep herding, but also market gardening, wildlife conservation and game viewing – ‘ecotourism’ before the word was invented.
+        Since then there have been significant changes. Lewa has become a Wildlife Conservancy run by a board of trustees, and conservation of endangered species – especially black rhinos and Grevy’s zebra – are it’s main focus. Until the early 1980s, Lewa had few fences, as cattle were herded in a traditional way by local herders and were corralled in a boma (or thornbush enclosure) at night for protection against predators.
+        As a result of a lack of fencing and protection against poachers, wildlife sought refuge in the area and their numbers on the property significantly increased.\n\n
+    <b>http://www.lewa.org</b>
+    </string>
 </resources>
