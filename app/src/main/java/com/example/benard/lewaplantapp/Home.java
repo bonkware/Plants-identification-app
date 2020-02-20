@@ -3,15 +3,8 @@ package com.example.benard.lewaplantapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
-import static com.example.benard.lewaplantapp.R.string.button;
 
 /**
  * Created by benard on 8/14/17.

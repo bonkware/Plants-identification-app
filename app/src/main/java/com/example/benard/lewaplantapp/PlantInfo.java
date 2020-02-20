@@ -23,19 +23,19 @@ public class PlantInfo extends TabActivity {
         // Tab for Description
         TabSpec desc = tabHost.newTabSpec("Description");
         // setting Title and Icon for the Tab
-        desc.setIndicator("Description");
+        desc.setIndicator("Description >");
         Intent descIntent = new Intent(this, Description.class);
         desc.setContent(descIntent);
 
         // Tab for Uses
         TabSpec uses = tabHost.newTabSpec("Common names");
-        uses.setIndicator("Common names");
+        uses.setIndicator("Common names >>");
         Intent usesIntent = new Intent(this, Uses.class);
         uses.setContent(usesIntent);
 
         // Tab for Ecology
         TabSpec ecology = tabHost.newTabSpec("Distribution");
-        ecology.setIndicator("Distribution");
+        ecology.setIndicator("Distribution >>>");
         Intent ecologyIntent = new Intent(this, Ecology.class);
         ecology.setContent(ecologyIntent);
 
@@ -44,4 +44,5 @@ public class PlantInfo extends TabActivity {
         tabHost.addTab(uses); // Adding uses tab
         tabHost.addTab(ecology); // Adding Ecology tab
     }
+
 }

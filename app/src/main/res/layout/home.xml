@@ -21,7 +21,7 @@
         android:layout_below="@+id/view"
         android:layout_centerHorizontal="true"
         android:layout_margin="30dp"
-        android:background="#f6f9f7"
+        android:background="@drawable/radius_border"
         android:padding="30dp" >
 
         <RelativeLayout
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/tittle"
                 android:textSize="14dp"
                 android:gravity="center"
@@ -61,7 +61,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="@string/text"
+                android:text=""
                 android:textSize="14dp"
                 android:textStyle="italic" />
             <Button
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/logo" />
 
     <LinearLayout
@@ -154,14 +154,15 @@
                     android:layout_width="0dp" android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Lewa Plant App"
-                    android:textSize="15sp"
-                    android:textStyle="italic"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     android:textColor="#0b0b0b"/>
                 <TextView
                     android:layout_width="0dp" android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="General Info"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textStyle="italic"
                     android:textColor="#3420a4"
                     android:gravity="right"
